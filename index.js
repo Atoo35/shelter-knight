@@ -7,7 +7,7 @@ client.on('ready',async()=>{
 
 client.on('message',async(message)=>{
     if(message.channel.id === '900867004351803442'){
-        message.member.setNickname(message.content).then(message.react('809086244130521109'));
+        message.member.setNickname(message.content).then(message.react('823598171401486356'));
     }
 })
 client.login(process.env.BOT_TOKEN)
