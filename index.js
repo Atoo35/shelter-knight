@@ -6,8 +6,12 @@ client.on('ready',async()=>{
 })
 
 client.on('message',async(message)=>{
-    if(message.channel.id === '900867004351803442'){
-        message.member.setNickname(message.content).then(message.react('823598171401486356'));
+    if(message.guild.id === '801859454730502165'){
+        if(message.channel.id === '900867004351803442'){
+            message.member.setNickname(message.content).then(message.react('823598171401486356'));
+        }
+    } else {
+        console.log('other guild')
     }
 })
 client.login(process.env.BOT_TOKEN)
