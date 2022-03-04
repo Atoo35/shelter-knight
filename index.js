@@ -12,7 +12,7 @@ client.on('message',async(message)=>{
         }
     } else if(message.guild.id === '687260317918560272'){
         const { member } = message;
-        member.setNickname(message.content).then(message.react('944357281800286219'));
+        member.setNickname(message.content).then(message.react('✅'));
         var role = member.guild.roles.cache.get('689566517368848386');
         member.roles.add(role)
     }
