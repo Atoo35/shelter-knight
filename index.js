@@ -10,7 +10,7 @@ client.on('message',async(message)=>{
         if(message.channel.id === '900867004351803442'){
             message.member.setNickname(message.content).then(message.react('823598171401486356'));
         }
-    } else if(message.guild.id === '944327912352518224'){
+    } else if(message.guild.id === '687260317918560272'){
         const { member } = message;
         member.setNickname(message.content).then(message.react('944357281800286219'));
         var role = member.guild.roles.cache.get('689566517368848386');
