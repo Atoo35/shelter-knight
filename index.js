@@ -6,15 +6,20 @@ client.on('ready',async()=>{
 })
 
 client.on('message',async(message)=>{
-    if(message.guild.id === '801859454730502165'){
-        if(message.channel.id === '900867004351803442'){
-            message.member.setNickname(message.content).then(message.react('823598171401486356'));
+    try {
+        if(message.guild.id === '801859454730502165'){
+            if(message.channel.id === '900867004351803442'){
+                message.member.setNickname(message.content).then(message.react('823598171401486356'));
+            }
+        } else if(message.guild.id === '687260317918560272'){
+            const { member } = message;
+            member.setNickname(message.content).then(message.react('✅'));
+            var role = member.guild.roles.cache.get('689566517368848386');
+            member.roles.add(role)
         }
-    } else if(message.guild.id === '687260317918560272'){
-        const { member } = message;
-        member.setNickname(message.content).then(message.react('✅'));
-        var role = member.guild.roles.cache.get('689566517368848386');
-        member.roles.add(role)
+        
+    } catch (error) {
+        console.log(error)
     }
 })
 client.login(process.env.BOT_TOKEN)
