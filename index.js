@@ -14,7 +14,7 @@ client.on('message',async(message)=>{
         const { member } = message;
         member.setNickname(message.content).then(message.react('944357281800286219'));
         var role = member.guild.roles.cache.get('689566517368848386');
-        member.addRole(role)
+        member.roles.add(role)
     }
 })
 client.login(process.env.BOT_TOKEN)
